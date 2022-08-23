@@ -1,0 +1,559 @@
+@import '_colors.scss';
+@import '_animation.scss';
+
+*, *::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    scroll-padding-top: 70px;
+}
+
+body 
+{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $color-white;
+}
+
+h2
+{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline
+{
+    margin: 0 auto 40px;
+    width: 300px;
+    height: 4px;
+    background-color: $color-hover;
+}
+
+.shadow-bg
+{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.navbar
+{
+    text-transform: uppercase;
+    z-index: 1;
+    transition: background-color 0.6s;
+    
+    a, i{
+        color: $color-white;
+    }
+
+    a:hover
+    {
+        color: $color-main;
+    }
+
+    .fa-wind
+    {
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .navbar-brand
+    {
+        font-weight: bold;
+    }
+
+    .active 
+    {
+        color: $color-main !important; 
+    }
+}
+
+header
+{
+    color: $color-white;
+    
+    p
+    {
+        text-align: center;
+    }
+
+    span
+    {
+        color: $color-main;
+    }
+
+    .hero-img
+    {
+        position: relative;
+        height: 100vh;
+        background-image: url('../img/clouds-g55c59e72a_640.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    .hero-bg
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+
+    .hero-text
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        z-index: 2;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .fa-chevron-down
+    {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        font-size: 30px;
+        color: $color-white;
+    }
+
+}
+
+.about
+{
+    i
+    {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .about-card-title
+    {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .about-card-text
+    {
+        font-size: 14px;
+    }
+
+    .about-hover
+    {
+        transition: color 0.3s;
+    }
+
+    .about-hover:hover
+    {
+        color: $color-main;
+    }
+}
+
+.about-hero
+{
+    position: relative;
+    background-image: url('../img/wind-turbines-in-the-fog-gb8fc5e17e_640.jpg');
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+
+    .about-bg
+    {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        z-index: -1;
+    }
+
+    .about-hero-item
+    {
+        margin: 10px 0;
+        
+        i
+        {
+            font-size: 25px;
+        }
+    }
+}
+
+.examples
+{
+    .carousel-item
+    {
+        position: relative;
+        height: 500px;
+    }
+
+    .carousel-caption
+    {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 30px 0;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .carousel-indicators
+    {
+        padding-bottom: 20px;
+    }
+}
+
+.prices
+{  
+    .price-table
+    {
+        margin: 20px;
+        padding: 20px;
+        background-color: $color-white;
+        box-shadow: 2px 2px 2px gray;
+        transition: transform 0.3s;
+
+        h4
+        {
+            text-transform: uppercase;
+            color: $color-main;
+        }
+
+        .btn
+        {
+            padding: 5px 20px;
+        }
+
+        span
+        {
+            font-weight: bold;
+        }
+
+    }
+
+    .price-table:hover
+    {
+        transform: scale(1.05);
+    }
+
+
+    .price-content-bottom
+    {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+.team
+{
+    .team-img
+    {
+        position: relative;
+        background-image: url('../img/inside-g396cc9de3_1920.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+
+        .team-bg
+        {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: -1;
+        }
+
+        h2
+        {
+            color: $color-white;
+        }
+
+        .card
+        {
+            transition: transform 0.3s;
+            
+            img
+            {
+                height: 300px;
+                object-fit: cover;
+            }
+            
+            .card-footer
+            {
+                i
+                {
+                    padding: 10px;
+                    color: $color-hover;
+                }
+            }
+            
+            .card-title
+            {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .card-body
+            {
+                height: 160px;
+            }
+        }
+
+        .card:hover
+        {
+            transform: scale(0.98);
+        }
+    }    
+}
+
+.achievements
+{
+    i
+    {
+        padding: 10px;
+        font-size: 48px;
+        color: $color-white;
+        text-shadow: 0 0 5px black;
+    }
+
+    .achievements-list
+    {
+        padding: 20px 0;
+    }
+
+    .achievement-number
+    {
+        font-size: 22px;
+    }
+
+    .achievement-text
+    {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+}
+
+.contact
+{
+    position: relative;
+    background-image: url('../img/architecture-gfbb3192cb_1920.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    z-index: 0;
+
+    h2
+    {
+        color: $color-white;
+    }
+
+
+    .contact-us
+    {
+        color: $color-white;
+
+        .contact-item
+        {
+            margin: 30px 0;
+
+            h3
+            {
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+
+           
+
+            .social-media
+            {
+                font-size: 20px;
+
+                .fa-brands
+                {
+                    color: $color-white;
+                    transition: color 300ms;
+                }
+
+                .fa-facebook-f:hover 
+                {
+                    color: #3b5998;
+                }
+                
+                .fa-twitter:hover 
+                {
+                    color: #00acee;
+                }
+
+                .fa-linkedin-in:hover 
+                {
+                    color: #0e76a8;
+                }
+            }
+
+            .contact-form
+            {
+                    
+                font-size: 15px;
+
+
+                .input-text 
+                {
+                    width: 90%;
+                    margin-top: 15px;
+                    padding: 10px;
+                    color: $color-white;
+                    border: none;
+                    border: 1px solid gray;
+                    border-radius: 8px;
+                    background-color: black;
+                    /*outline - obramowanie pól*/
+                    outline: none;
+                }
+
+                .message-text 
+                {
+                    width: 90%;
+                    height: 150px;
+                    margin-top: 15px;
+                    padding: 10px;
+                    color: $color-white;
+                    border: 1px solid gray;
+                    border-radius: 8px;
+                    background-color: black;
+                    outline: none;
+                    resize: none;
+                }
+
+                .message-text:focus 
+                {
+                    border: 1px solid $color-hover;
+                    color: $color-white;
+                }
+
+                .input-text:focus 
+                {
+                    border: 1px solid $color-hover;
+                    color: $color-white;
+                }
+
+                .btn 
+                {
+                    width: 50%;
+                    margin-top: 15px;
+                    padding: 5px;
+                    font-size: 18px;
+                    background-color: black;
+                    color: $color-white;
+                    border: 1px solid $color-hover;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background-color 200ms, color 200ms;
+                }
+
+            .btn:hover 
+                {
+                    background-color: $color-hover;                    
+                    color: $color-white;
+                }
+
+            }
+            
+
+
+        }
+    
+    
+    }
+
+    .contact-bg
+    {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        z-index: -1;
+    } 
+}
+
+
+@media(min-width: 390px)
+{
+    header
+    {
+        h1
+        {
+            font-size: 36px;
+        }
+
+        p
+        {
+            font-size: 20px;
+        }
+    }
+}
+
+@media(min-width: 768px)
+{
+
+    .navbar
+    {
+
+        .fa-bars-staggered
+        {
+            font-size: 28px;
+        }
+    }
+    
+    header
+    {
+        h1
+        {
+            font-size: 45px;
+        }
+
+        p
+        {
+            font-size: 20px;
+        }
+    }
+}
+
+@media(min-width: 992px)
+{
+
+    .about-hero
+    {
+        background-image: url('../img/wind-turbines-in-the-fog-gdd11de76e_1920.jpg');
+    }
+}
+
+@media(min-width: 1200px)
+{
+    header
+    {
+        .hero-img
+        {
+            background-image: url('../img/clouds-g9d696a40c_1920.jpg');
+        }
+    }
+    
+}
+
+
+
+

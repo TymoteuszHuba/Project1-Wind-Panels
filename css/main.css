@@ -1,8 +1,7 @@
 @charset "UTF-8";
 .bounce-top {
   display: block;
-  -webkit-animation: bounce-top 2s 4 both;
-          animation: bounce-top 2s 4 both;
+  animation: bounce-top 2s 4 both;
 }
 
 /* ----------------------------------------------
@@ -16,40 +15,9 @@
  * animation bounce-top
  * ----------------------------------------
  */
-@-webkit-keyframes bounce-top {
-  0% {
-    transform: translateY(-45px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    transform: translateY(-24px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    transform: translateY(-12px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  25%, 55%, 75%, 87% {
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-}
 @keyframes bounce-top {
   0% {
+    -webkit-transform: translateY(-45px);
     transform: translateY(-45px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
@@ -59,21 +27,25 @@
     opacity: 1;
   }
   40% {
+    -webkit-transform: translateY(-24px);
     transform: translateY(-24px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   65% {
+    -webkit-transform: translateY(-12px);
     transform: translateY(-12px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   25%, 55%, 75%, 87% {
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   100% {
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
@@ -284,8 +256,7 @@ header .fa-chevron-down {
 }
 .team .team-img .card img {
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .team .team-img .card .card-footer i {
   padding: 10px;
